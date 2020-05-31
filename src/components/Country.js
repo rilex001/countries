@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {v4} from 'uuid';
 
 function Country() {
 
@@ -25,11 +26,10 @@ function Country() {
     }, [])
     return (
         <div>
-            {
-                country && country.map(item => (
-                    <p key={item.name}>{item}</p>
-                ))
-            }
+            {/* {
+                country && country.map(item => <p key={v4()}>{item.name}</p>)
+            } */}
+            
         </div> 
     )
 }
