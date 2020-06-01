@@ -4,11 +4,8 @@ import CountryInformation from './CountryInformation'
 function Country() {
 
     const [country, setcountry] = useState([])
-    const [search, setSearch] = useState('serbia')
-
-    console.log(search)
     useEffect(() => {
-        fetch(`https://restcountries-v1.p.rapidapi.com/${search.length ? 'all' : `name/{search}`}`, {
+        fetch(`https://restcountries-v1.p.rapidapi.com/all `, {
 	        "method": "GET",
 	        "headers": {
 		    "x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
@@ -28,12 +25,7 @@ function Country() {
     }, [])
     return (
         <div>
-            <input
-                type='text'
-                value={search}
-                placeholder='country'
-                onChange={e => setSearch(e.target.value)}
-            />
+           
             
             {
                 country && country.map(item =>
