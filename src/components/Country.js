@@ -31,6 +31,7 @@ function Country() {
                 country && country.map(item =>
                      <CountryInformation  country={item} />
                 )
+                
             }
            
         </div> 

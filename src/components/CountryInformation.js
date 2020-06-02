@@ -15,7 +15,7 @@ const CountryInformation = ({country}) => {
             <p>Language is: {country.languages.map(lng => <p>{lng}</p> )}</p>
             <p>Native name is : {country.nativeName}</p>
             <p>CallingCodes is {country.callingCodes}</p>
-            <p>Demonym is {country.demonym}</p>
+            <p>Demonym is: {country.demonym}</p>
         </div>
     )
 }
