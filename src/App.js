@@ -5,7 +5,8 @@ import Country from './components/Country';
 function App() {
   return (
     <>
-      <h1>Country</h1>
+      <h1 className='header'>Country</h1>
+      
       <Country />
     </>
   );

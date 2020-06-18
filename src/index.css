@@ -1,33 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+/* variables */
+:root{
+  --primary: #0063B2FF;
+  --secondary: #9CC3D5FF;
+}
+
 body {
-  margin: 50px;
-  background-color: rgb(177, 175, 179);
+  background-color: var(--primary);
+  font-family: 'Jockey One', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.countryContainer {
-  text-align: center;
-  padding: 5px;
-  font-size: 25px;
-}
-
-.countryName {
-  color: rgb(207, 212, 216);
-  background-color: rgb(95, 95, 99);
-  padding: 5px 0px;
-  font-size: 30px;
-  width: auto;
+.header{
   text-align: center;
 }
 
-h1 {
-  font-size: 50px;
+.countryContainer{
+  background-color: var(--secondary);
   text-align: center;
+  padding: 0;
+  grid-column: 2/8;
+  margin-top: 35px;
 }
 
-form {
-  text-align: center;
+.countryflag{
+  height: auto;
+  width: 100%;
 }
+
+.countryName{
+  margin-top: 5px;
+  font-size: 1.2em;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.countrydetails{
+  text-align: left;
+  margin-left: 20px;
+}
+
+
+
+select{
+  height: 30px;
+  background-color: var(--secondary);
+  grid-column: 2/5;
+  font-size: 1.1em;
+  font-family: 'Jockey One', sans-serif;
+  margin-top: 10px;
+}
+
+.search{
+  grid-column: 2/8;
+  height: 30px;
+  font-family: 'Jockey One', sans-serif;
+  text-align: left;
+  border: 2px solid #9b9b9b;
+  border-radius: 20px;
+  background-color: var(--secondary);
+}
+
+
+
