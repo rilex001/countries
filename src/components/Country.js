@@ -14,11 +14,10 @@ function Country() {
     const [country, setcountry] = useState([])
     const [search, setSearch] = useState('')
 
-    {console.log(region)}
     useEffect(() => {
         fetch(
-              search ? `${fullName}${search}`
-            : region ? `${regionapi}${region}`
+             region ? `${regionapi}${region}`
+            : search ? `${fullName}${search}`
             : `${all}`
         )
         .then(response => 
@@ -57,9 +56,9 @@ function Country() {
 
         <div className='grid'>
             {
-                country && country.map(item =>
+                country ? country.map(item =>
                      <CountryInformation  country={item} key={v4()} />
-                )
+                ) : <div>Don't have country</div>
                 
             }
     
