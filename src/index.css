@@ -20,7 +20,7 @@ body {
   text-align: center;
   padding: 0;
   grid-column: 2/8;
-  margin-top: 35px;
+  margin: 35px 0;
 }
 
 .countryflag{
@@ -61,6 +61,14 @@ select{
   text-align: left;
   border: 2px solid #9b9b9b;
   border-radius: 20px;
+  background-color: var(--secondary);
+}
+
+.backbutton{
+  margin-left: 49px;
+  width: 90px;
+  height: 39px;
+  font-family: 'Jockey One', sans-serif;
   background-color: var(--secondary);
 }
 
