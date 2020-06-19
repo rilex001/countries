@@ -26,16 +26,20 @@ class CountryPage extends Component {
     render() {
       const {country} = this.state
       const countryInformation = country.length ? (
-        <div className="countryContainer" key={v4()} >
+        <div className="countryInformation" key={v4()} >
+          <div>
             <img src={country[0].flag} alt='country flag' className='countryflag'></img>
-              <p className="countryName"><b>{country[0].name}</b></p>
+            </div>    
+            
                <div className='countrydetails'>
+                    <h3>{country[0].name}</h3>
                     <p><b>Native name: </b>{country[0].nativeName}</p>
                     <p><b>Capital:</b> {country[0].capital}</p>
                     <p><b>Population: </b>{country[0].population / 1000000}  million's</p>
                     <p><b>Area: </b>{country[0].area} km²</p>
                     <p><b>Region: </b>{country[0].region}</p>
                     <p><b>Subregion: </b>{country[0].subregion}</p>
+                    </div><div className='countrydetails'>
                     <p><b>Timezones: </b>{country[0].timezones.map(time =><span> {time}</span>)}</p>
                     <p><b>latlng: </b>[{country[0].latlng[0]}, {country[0].latlng[1]}]</p>
                     <p><b>Language: </b>{country[0].languages.map(language =><span> {language.name}</span>)}</p>

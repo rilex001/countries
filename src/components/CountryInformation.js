@@ -10,7 +10,7 @@ const CountryInformation = ({country}) => {
         <Link to={'/' + country.name}>      <p className="countryName"><b>{country.name}</b></p>
         </Link>         <div className='countrydetails'>
                     <p><b>Capital:</b> {country.capital}</p>
-                    <p><b>Population: </b>{country.population / 1000000}  million's</p>
+                    <p><b>Population: </b>{country.population}</p>
                     <p><b>Region: </b>{country.region}</p>
                 </div>
         </div>

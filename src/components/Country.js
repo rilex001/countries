@@ -33,16 +33,15 @@ function Country() {
     }, [region, search])
     return (
         <>
-        <div className='grid'>
+        <div className='searchgrid'>
         <input 
             className="search" 
             placeholder="Search for a country..." 
             value={search}
             onChange={e => setSearch(e.target.value)}
         />
-        </div>
+        
 
-        <div className="custom-select grid" >
 
             <select id="region" value={region} onChange={e => setRegion(e.target.value)}>
                 <option value="">Filter by Region</option>
@@ -52,8 +51,7 @@ function Country() {
                 <option value="europe">Europe</option>
                 <option value="oceania">Oceania</option>
             </select> 
-        </div> 
-
+</div>
         <div className='grid'>
             {
                 country ? country.map(item =>

@@ -23,6 +23,14 @@ body {
   margin: 35px 0;
 }
 
+.countryInformation{
+  background-color: var(--secondary);
+  text-align: center;
+  padding: 0;
+  grid-column: 2/8;
+  margin: 35px 0;
+}
+
 .countryflag{
   height: auto;
   width: 100%;
@@ -34,6 +42,11 @@ body {
 }
 
 .grid{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.searchgrid{
   display: grid;
   grid-template-columns: repeat(8, 1fr);
 }
@@ -72,5 +85,86 @@ select{
   background-color: var(--secondary);
 }
 
+/* small tablet styles */
+@media screen and (min-width: 900px){
 
+  .grid{
+    display: flex;
+	  flex-wrap: wrap;
+	  align-items: center;
+	  justify-content: space-between;
+	  margin: auto;
+	  max-width: 3440px;
+	  padding: 50px;
+	  position: relative;
+  }
+
+  .countryContainer{
+	  background-color: var(--secondary);
+	  cursor: pointer;
+	  overflow: hidden;
+	  margin: 15px 10px;
+	  max-width: 100%;
+	  width: 300px;
+  }
+
+  .searchgrid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+select{
+  height: 40px;
+  background-color: var(--secondary);
+  grid-column: 9/12;
+  font-size: 1.5em;
+  font-family: 'Jockey One', sans-serif;
+  margin-top: 10px;
+}
+
+.search{
+  grid-column: 2/6;
+  height: 40px;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 1.5em;
+  text-align: left;
+  border: 2px solid #9b9b9b;
+  border-radius: 20px;
+  background-color: var(--secondary);
+}
+
+.backbutton{
+  margin-left: 49px;
+  width: 130px;
+  height: 50px;
+  font-family: 'Jockey One', sans-serif;
+  background-color: var(--secondary);
+}
+
+.countryInformation{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--primary);
+
+}
+
+.countryflag{
+  height: 100%;
+  width: 100%;
+}
+
+.countrydetails{
+  text-align: left;
+  margin-left: 40px;
+  font-size: 1.4em;
+  font-family: 'Jockey One', sans-serif;
+}
+
+h3{
+  font-size: 1.7em;
+  padding: 0;
+  margin: 0;
+}
+
+}
 
