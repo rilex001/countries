@@ -54,9 +54,9 @@ function Country() {
 </div>
         <div className='grid'>
             {
-                country ? country.map(item =>
+                country.length ? country.map(item =>
                      <CountryInformation  country={item} key={v4()} />
-                ) : <div>Don't have country</div>
+                ) : <div className='countryInformation'>Don't have country</div>
                 
             }
     
